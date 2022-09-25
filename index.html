@@ -4,37 +4,52 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
     <title>DHFlix</title>
 </head>
 <body>
     <header>
         <section class="main-header" >
             <nav>
-                <div class="logo-dh">
-                    <img src="./imgs/dh-logo/logo-mini.jpg" alt="Mini logotipdo da Digital House.">
+                <div class="cabecalho">
+                    <div class="logo-dh">
+                        <img src="./imgs/dh-logo/logo-mini.jpg" alt="Mini logotipdo da Digital House.">
+                    </div>
+
+                    <button 
+                    class="botao-menu" 
+                    id="botao-menu" 
+                    onclick="clickMenu()">
+                        &#9776;
+                    </button>
                 </div>
-                <ul>
-                    <li>Home</li>
-                    <li>Itens</li>
-                    <li>Sobre nós</li>
-                    <li>Login</li>
-                </ul>
+
+                <menu id="itens" >
+                    <ul>
+                        <li> <a href="#introducao-site">Home</a></li>
+                        <li> <a href="#catalogo">Itens</a></li>
+                        <li> <a href="#sobreNos">Sobre nós</a></li>
+                        <li> <a href="">Login</a></li>
+                    </ul>
+                </menu>
             </nav>
         </section>
     </header>
 
     <main>       
         <div class="main-content">
-            <div>
+            <div class="introducao-site"
+            id="introducao-site">
                 <h1>DH Flix</h1>
                 <p>Confira a maior coletânea de filmes que a Digital House tem a te oferecer</p>
             </div>
             <button class="botao-explorar">
-                <p>Explorar</p>
+                <p><a href="#catalogo">Explorar</a></p>
             </button>
         </div>
 
-        <section class="catalogo">
+        <section class="catalogo" id="catalogo">
             <h1 class="filmes-em-cartaz">Filmes no Catalogo</h1>
             <nav>
                 <ul>
@@ -136,7 +151,7 @@
     </main>
 
     <footer>
-        <div class="creditos-footer">
+        <div class="creditos-footer" id="sobreNos">
             <h1>Denilson (SoDDeN_1) Sodré Oliveira dos Santos</h1>
             <P>Responsável por codar tudo o que você viu e ainda verá por aqui.</P>
             <div class="social-medias">
@@ -149,6 +164,15 @@
             </div>
         </div>
     </footer>
-    
+
+    <script>
+        function clickMenu() {
+            if (itens.style.display == 'block') {
+                itens.style.display ='none'
+            } else {itens.style.display = 'block'
+        }
+    }
+    </script>
+
 </body>
 </html>

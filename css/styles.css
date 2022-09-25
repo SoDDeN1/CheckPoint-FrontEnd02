@@ -43,6 +43,17 @@ font-family: 'Roboto', sans-serif;
     color: black;
 }
 
+#itens ul li {
+    background-color: white;
+    width: 100px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+#itens ul li:hover {
+    background-color: gray;
+}
+
 /* Aqui começa o EXPLORAR main content */
  
 .main-content {
@@ -143,6 +154,16 @@ font-family: 'Roboto', sans-serif;
     font-size:15px;    
 }
 
+#itens ul li a {
+    text-decoration: none;
+    color: black;
+} 
+
+.botao-explorar a {
+    text-decoration: none;
+    color: white;
+}
+
 /* Aqui começa o Footer */
 
 .creditos-footer {
@@ -169,32 +190,96 @@ font-family: 'Roboto', sans-serif;
     height: 25px;
 }
 
+.botao-explorar:hover {
+    background-color: rgb(46, 133, 46);
+}
+
+.botao-abrir-filme:hover {
+    background-color: gray;
+}
+
+.botao-menu {
+    display: none;
+}
+
 /* Aqui começo a responsividade para celular w428 x h926 */
 
-@media (max-width:428px) {
+button:focus ~ #itens {
+    display: flex;
+}
+
+@media (max-width:430px) {
 
     .main-header {
-        height: 110px;
+        position: fixed;
     }
 
-    .main-header nav {
-        flex-direction: column;
-    }
-
-    .main-header nav ul {
-        gap: 10px;
-    }
-    
     .main-header nav ul li {
-        width: 92px;
-        font-size: 18px;
+        font-size: 22px;
         border: 1px solid black;
         border-radius: 5px;
         text-align: center;
     }
 
+    .main-header nav ul li:hover {
+        color: white;
+        background-color: gray;
+    }
+
+    #itens ul li {
+        display: flex;
+        width: 100%;
+        height: 30px;
+        border: none;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .main-header nav {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    #itens {
+        width: 100vh;
+        display: none;
+    }
+
+    .main-header nav #itens ul {
+        background-color: white;
+        flex-direction: column;
+        padding-bottom: 5px;
+        gap: 3px;
+    }
+
+    .botao-menu {
+        display: flex;
+        background-color: transparent;
+        border: none;
+        color: black;
+        font-size: 36px;
+    }
+
+    .cabecalho {
+        display: flex;
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .botao-explorar:hover {
+        background-color: rgb(46, 133, 46);
+    }
+
+    .botao-abrir-filme:hover {
+        background-color: gray;
+    }
+    
     .creditos-footer {
         text-align: center;
     }
 
+    .introducao-site {
+        text-align: center;
+    }
 }
